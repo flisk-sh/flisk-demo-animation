@@ -1,6 +1,6 @@
 # TDK Demo Animation
 
-Standalone, recording-friendly demo animation for [TDK CLI](https://github.com/tdk-landscape/tdk-cli-core).
+Standalone, recording-friendly demo animation for [TDK CLI](https://github.com/flisk-sh/flisk).
 
 ## Files
 
@@ -9,10 +9,10 @@ Standalone, recording-friendly demo animation for [TDK CLI](https://github.com/t
 
 ## View
 
-Watch it live at **https://tdk-landscape.github.io/tdk-demo-animation/**, or open `index.html` directly in a browser:
+Watch it live at **https://flisk-sh.github.io/tdk-demo-animation/**, or open `index.html` directly in a browser:
 
 ```bash
-git clone https://github.com/tdk-landscape/tdk-demo-animation.git
+git clone https://github.com/flisk-sh/tdk-demo-animation.git
 open tdk-demo-animation/index.html
 ```
 
@@ -24,4 +24,4 @@ open tdk-demo-animation/index.html
 
 ---
 
-⭐ **Like what you see?** [Star tdk-cli-core](https://github.com/tdk-landscape/tdk-cli-core) so other developers can find it.
+⭐ **Like what you see?** [Star tdk-cli-core](https://github.com/flisk-sh/flisk) so other developers can find it.
