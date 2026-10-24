@@ -1,6 +1,6 @@
-# TDK Demo Animation
+# Flisk Demo Animation
 
-Standalone, recording-friendly demo animation for [TDK CLI](https://github.com/flisk-sh/flisk).
+Standalone, recording-friendly demo animation for [Flisk CLI](https://github.com/flisk-sh/flisk).
 
 ## Files
 
@@ -9,19 +9,19 @@ Standalone, recording-friendly demo animation for [TDK CLI](https://github.com/f
 
 ## View
 
-Watch it live at **https://flisk-sh.github.io/tdk-demo-animation/**, or open `index.html` directly in a browser:
+Watch it live at **https://flisk-sh.github.io/flisk-demo-animation/**, or open `index.html` directly in a browser:
 
 ```bash
-git clone https://github.com/flisk-sh/tdk-demo-animation.git
-open tdk-demo-animation/index.html
+git clone https://github.com/flisk-sh/flisk-demo-animation.git
+open flisk-demo-animation/index.html
 ```
 
 ## Recording Notes
 
 - The animation loops every 40 seconds.
 - Use the on-screen Pause and Replay controls for capture timing.
-- The page is designed for a dark, high-contrast terminal/control-room look and includes the required beats: curl install, public release assets, Docker Compose workflow, project/resource generation, API-to-database dependency graph, and Quick Start / DoD validation.
+- The page is designed for a dark, high-contrast terminal/control-room look and includes the required beats: install, project and resource generation, `flisk up`, and the health URL.
 
 ---
 
-⭐ **Like what you see?** [Star tdk-cli-core](https://github.com/flisk-sh/flisk) so other developers can find it.
+⭐ **Like what you see?** [Star flisk](https://github.com/flisk-sh/flisk) so other developers can find it.
