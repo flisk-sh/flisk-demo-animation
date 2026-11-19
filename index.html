@@ -26,12 +26,13 @@
     .health{grid-area:health}.checks{padding:12px;display:grid;gap:8px}.check{display:grid;grid-template-columns:1fr auto;gap:8px;align-items:center;border:1px solid rgba(255,255,255,.1);border-radius:8px;padding:10px 12px;background:rgba(255,255,255,.04);font:clamp(10px,.85vw,12px) var(--mono);opacity:0;animation:in .45s forwards;animation-delay:calc(3.3s + var(--i)*.4s)}.check b{color:var(--green)}.big{font-size:clamp(20px,3vw,36px);line-height:.9;font-weight:900;letter-spacing:0;padding:0 12px 10px}
     .ribbon{position:absolute;left:14px;right:14px;bottom:10px;height:6px;border-radius:99px;background:rgba(255,255,255,.08);overflow:hidden}.ribbon span{display:block;height:100%;width:100%;background:linear-gradient(90deg,var(--cyan),var(--green),var(--amber));transform-origin:left;animation:load 7.4s infinite ease-in-out}@keyframes load{0%{transform:scaleX(.04)}70%,100%{transform:scaleX(1)}}
     @media(max-width:900px){body{overflow:auto}.frame{height:auto}.screen{grid-template-columns:1fr;grid-template-areas:"terminal" "folder" "browser" "health"}}
+    @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.line,.check{opacity:1;transform:none}.pulse:after{width:100%;transform:none}.ribbon span{transform:scaleX(1)}}
   </style>
 </head>
 <body>
   <main class="frame">
     <header><div class="brand"><div class="mark">flisk</div><div><h1>Install Flisk and see your app running in one take.</h1><p class="sub">For developers new to Flisk: watch a small shop go from install to a working health check. <a class="cta" href="https://flisk.sh/">Try it on your computer</a></p></div></div><div class="badge">Recording demo ready</div></header>
-    <section class="screen">
+    <section class="screen" aria-label="Animated demo: install Flisk, create a shop project, start it, and confirm the health checks pass">
       <article class="panel terminal"><div class="head"><span>Terminal: install and generate</span><span class="pulse"></span></div><div class="term">
         <div class="line" style="--i:0"><span class="prompt">$</span> curl -fsSL https://flisk.sh/install.sh | sh</div>
         <div class="line ok" style="--i:1">✓ Installed: /usr/local/bin/flisk</div>
