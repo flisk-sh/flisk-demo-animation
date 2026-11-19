@@ -23,3 +23,14 @@ jobs:
       security-events: write
       actions: read
     uses: flisk-sh/.github/.github/workflows/codeql.yml@b5eeea945364038cd2143e9676b77fc9af293dfa # v1.4.0
+
+  share-card-meta:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Check share-card metadata
+        run: node scripts/check-meta.mjs
