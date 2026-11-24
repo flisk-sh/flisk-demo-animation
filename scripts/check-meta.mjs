@@ -12,11 +12,15 @@ const meta = (pattern, label) => {
 
 const description = meta(/<meta name="description" content="([^"]+)">/, 'meta description');
 assert.ok(description.length > 0 && description.length < 160, `description is ${description.length} characters`);
-for (const property of ['og:title', 'og:description', 'og:image', 'og:url']) {
+for (const property of ['og:title', 'og:description', 'og:url']) {
   const value = meta(new RegExp(`<meta property="${property}" content="([^"]+)">`), property);
   assert.ok(value.length > 0, `${property} is empty`);
 }
-assert.match(meta(/<link rel="canonical" href="([^"]+)">/, 'canonical link'), /^https:\/\//);
+const canonical = meta(/<link rel="canonical" href="([^"]+)">/, 'canonical link');
+assert.match(canonical, /^https:\/\//);
+const expectedImage = new URL('og.png', canonical).href;
+assert.equal(meta(/<meta property="og:image" content="([^"]+)">/, 'og:image'), expectedImage, 'og:image must point to the bundled og.png');
+assert.equal(meta(/<meta name="twitter:image" content="([^"]+)">/, 'twitter:image'), expectedImage, 'twitter:image must point to the bundled og.png');
 assert.match(meta(/<link rel="icon" href="([^"]+)"/, 'icon link'), /^https:\/\//);
 
 const image = `${root}og.png`;

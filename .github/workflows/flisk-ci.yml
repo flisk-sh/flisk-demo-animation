@@ -34,3 +34,5 @@ jobs:
           node-version: 22
       - name: Check share-card metadata
         run: node scripts/check-meta.mjs
+      - name: Test share-card checker
+        run: node --test --test-concurrency=1 scripts/*.test.mjs
